@@ -20,6 +20,12 @@ By importing `nodule-express`, the following bindings are made available.
  -  `routes.notFound` return a 404-generating endpoint
  -  `routes.unauthorized` return a 401-generating endpoint
 
+## Commands
+* `install`: Install dependencies and save to yarn.lock file
+* `lint`: Runs airbnb flavored eslint
+* `build`: Runs tests and transpiles ES6 -> ES5
+* `test`: Runs tests
+
 ## Errors
 
 Endpoints should throw errors when something fails. Within `nodule-express`, it is expected that:
