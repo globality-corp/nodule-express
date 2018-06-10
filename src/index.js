@@ -8,3 +8,5 @@ export {
     NotFound,
     UnprocessableEntity,
 } from './errors';
+
+export { default as safely } from './decorators';
