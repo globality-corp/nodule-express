@@ -1,6 +1,6 @@
 {
     "name": "@globality/nodule-express",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Node Express Conventions",
     "main": "lib/",
     "repository": "git@github.com:globality-corp/nodule-express",
@@ -27,11 +27,11 @@
     },
     "peerDependencies": {
         "@globality/nodule-config": ">= 2.9.0 < 3",
-        "@globality/nodule-openapi": ">= 0.6.0 < 1"
+        "@globality/nodule-openapi": ">= 0.9.3 < 1"
     },
     "devDependencies": {
         "@globality/nodule-config": "~2.9.0",
-        "@globality/nodule-openapi": "~0.6.0",
+        "@globality/nodule-openapi": "~0.9.3",
         "babel-cli": "^6.26.0",
         "babel-eslint": "^8.2.2",
         "babel-plugin-transform-async-to-generator": "^6.24.1",

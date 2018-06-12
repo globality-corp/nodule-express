@@ -2,11 +2,12 @@
  */
 import {
     BAD_REQUEST,
+    CONFLICT,
     FORBIDDEN,
     INTERNAL_SERVER_ERROR,
     NOT_FOUND,
+    UNAUTHORIZED,
     UNPROCESSABLE_ENTITY,
-    GATEWAY_TIMEOUT,
 } from 'http-status-codes';
 
 
@@ -28,6 +29,12 @@ export class BadRequest extends APIError {
     }
 }
 
+export class Conflict extends APIError {
+    constructor(message = 'Conflict') {
+        super(message, CONFLICT);
+    }
+}
+
 export class Forbidden extends APIError {
     constructor(message = 'Forbidden') {
         super(message, FORBIDDEN);
@@ -46,29 +53,14 @@ export class NotFound extends APIError {
     }
 }
 
+export class Unauthorized extends APIError {
+    constructor(message = 'Unauthorized') {
+        super(message, UNAUTHORIZED);
+    }
+}
+
 export class UnprocessableEntity extends APIError {
     constructor(message = 'Unprocessable Entity') {
         super(message, UNPROCESSABLE_ENTITY);
-    }
-}
-
-
-export class TooManyResults extends APIError {
-    constructor(message = 'Too Many Results') {
-        super(message, INTERNAL_SERVER_ERROR);
-    }
-}
-
-
-export class NoResults extends APIError {
-    constructor(message = 'No Results') {
-        super(message, NOT_FOUND);
-    }
-}
-
-
-export class MaxLimitReached extends APIError {
-    constructor(message = 'Max Limit Reached') {
-        super(message, GATEWAY_TIMEOUT);
     }
 }
