@@ -11,4 +11,10 @@ export {
     UnprocessableEntity,
 } from './errors';
 
+export {
+    buildRequestLogs,
+    logSuccess,
+    logFailure,
+} from './logging';
+
 export { default as safely } from './decorators';
