@@ -1,0 +1,7 @@
+{
+  "type": "node-module",
+  "params": {
+    "name": "nodule-express",
+    "open_source": true
+  }
+}
