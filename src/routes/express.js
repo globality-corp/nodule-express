@@ -8,7 +8,7 @@ import { bind } from '@globality/nodule-config';
 
 function createExpress() {
     const app = express();
-    app.use(cors({}));
+    app.use(cors({ maxAge: 86400 }));
     app.use(helmet());
     app.use(requestId);
 
