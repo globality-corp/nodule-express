@@ -1,8 +1,6 @@
-import request from 'supertest';
-
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
-
 import 'index';
+import request from 'supertest';
 
 
 describe('Basic API', () => {
