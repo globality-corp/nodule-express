@@ -1,4 +1,4 @@
-import { bind, clearBinding, getContainer, Nodule } from '@globality/nodule-config';
+import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
 import 'index';
 import request from 'supertest';
 
@@ -25,41 +25,6 @@ describe('Basic API', () => {
             message: 'OK',
             name: 'test',
             ok: true,
-        });
-    });
-
-    it('returns sharing disabled for config if no secrets specified', async () => {
-        const nodule = Nodule.testing();
-        await nodule.load();
-
-        const { express, config } = getContainer('routes');
-        express.get('/api/config', config);
-
-        const response = await request(express).get(
-            '/api/config',
-        );
-
-        expect(response.statusCode).toBe(200);
-        expect(response.body).toEqual(
-            'Config sharing disabled if no secrets are labeled',
-        );
-    });
-
-    it('returns config if secrets are specified', async () => {
-        const nodule = Nodule.testing();
-        await nodule.load();
-        bind('config.secrets', () => ['middleware']);
-
-        const { express, config } = getContainer('routes');
-        express.get('/api/config', config);
-
-        const response = await request(express).get(
-            '/api/config',
-        );
-
-        expect(response.statusCode).toBe(200);
-        expect(response.body).toEqual({
-            secrets: undefined,
         });
     });
 
