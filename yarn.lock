@@ -100,9 +100,10 @@
     bottlejs "^1.7.0"
     lodash "^4.17.5"
 
-"@globality/nodule-config@~2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@globality/nodule-config/-/nodule-config-2.9.0.tgz#0024eaafbd01074c4fa7bcc1f88bfe699286ca76"
+"@globality/nodule-config@~2.11.0":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@globality/nodule-config/-/nodule-config-2.11.0.tgz#5f0830cbbb4f98b47b59f041f4c88d9de37e3e6f"
+  integrity sha512-SgYuh7LQTzRhawan5BIs+n1/zk+phSsw1e2h/JI2Y2O8VDjwWTNICb4ork8+mxNt2WJ+cxDnLeG4ctJvar7r/g==
   dependencies:
     aws-sdk "^2.231.1"
     bottlejs "^1.7.0"
