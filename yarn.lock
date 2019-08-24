@@ -121,12 +121,13 @@
     on-finished "~2.3.0"
     on-headers "~1.0.1"
 
-"@globality/nodule-openapi@~0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@globality/nodule-openapi/-/nodule-openapi-0.9.3.tgz#b64d322e9ffa27129c668145bf809c788ad5e348"
+"@globality/nodule-openapi@~0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@globality/nodule-openapi/-/nodule-openapi-0.15.0.tgz#61aabb5da95717f0a8b99d0e8820d24b92a8155d"
+  integrity sha512-TrsdjlJX+L7Kk/AQBtCRg1PXc9pCeMGQ8K/M8UTyR0VC5HSwWtkY6iqGxsroG7i+qH9sPzHrZz7s2g5OG+Bq5g==
   dependencies:
     "@globality/nodule-config" "^2.3.0"
-    axios "^0.18.0"
+    axios "^0.18.1"
     http-status-codes "^1.3.0"
     lodash "^4.17.5"
     throat "^4.1.0"
@@ -375,12 +376,13 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
 
-axios@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+axios@^0.18.1:
+  version "0.18.1"
+  resolved "https://globality.jfrog.io/globality/api/npm/npm/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
+  integrity sha1-/z8N4ue10YDnV62YAA8Qgbh7zqM=
   dependencies:
-    follow-redirects "^1.3.0"
-    is-buffer "^1.1.5"
+    follow-redirects "1.5.10"
+    is-buffer "^2.0.2"
 
 babel-cli@^6.26.0:
   version "6.26.0"
@@ -1421,9 +1423,10 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0:
+debug@=3.1.0, debug@^3.1.0:
   version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  resolved "https://globality.jfrog.io/globality/api/npm/npm/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
   dependencies:
     ms "2.0.0"
 
@@ -2037,11 +2040,12 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-follow-redirects@^1.3.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.0.tgz#234f49cf770b7f35b40e790f636ceba0c3a0ab77"
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://globality.jfrog.io/globality/api/npm/npm/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
   dependencies:
-    debug "^3.1.0"
+    debug "=3.1.0"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -2491,6 +2495,11 @@ is-binary-path@^1.0.0:
 is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+
+is-buffer@^2.0.2:
+  version "2.0.3"
+  resolved "https://globality.jfrog.io/globality/api/npm/npm/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
+  integrity sha1-Ts8/z3ScvR5HJonhCaxmJhol5yU=
 
 is-builtin-module@^1.0.0:
   version "1.0.0"
