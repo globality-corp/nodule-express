@@ -5,19 +5,40 @@ import requestId from 'connect-requestid';
 
 import { bind, getContainer, setDefaults } from '@globality/nodule-config';
 
+function getCORSOrigin () {
+    const { config } = getContainer();
+    const { reflectOrigin, allowedOrigins } = config.cors;
+
+    if (reflectOrigin) {
+        return true;
+    }
+
+    if (allowedOrigins) {
+        return (origin, callback) => {
+            if(allowedOrigins.split(',').indexOf(origin) !== -1) {
+                callback(null, true);
+            } else {
+                callback(new Error('Not allowed by CORS'));
+            }
+        };
+    }
+
+    return null;
+}
+
 setDefaults('cors', {
     reflectOrigin: false,
+    allowedOrigins: '',
 });
 
 function createExpress() {
-    const { config } = getContainer();
-
     const corsOptions = {
         maxAge: 86400,
     };
+    const corsOrigin = getCORSOrigin();
 
-    if (config.cors.reflectOrigin) {
-        corsOptions.origin = true;
+    if (corsOrigin !== null) {
+        corsOptions.origin = corsOrigin;
     }
 
     const app = express();

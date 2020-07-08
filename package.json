@@ -7,10 +7,12 @@
     "author": "Globality Engineering",
     "license": "MIT",
     "scripts": {
+        "clean": "rm -rf ./lib",
         "build": "babel src --out-dir lib --ignore '**/__tests__/*,**/__mocks__/*'",
         "lint": "eslint src --cache",
         "test": "jest",
-        "verify": "yarn lint && yarn test"
+        "verify": "yarn lint && yarn test",
+        "preyalc": "yarn build"
     },
     "dependencies": {
         "basic-auth": "^1.1.0",
