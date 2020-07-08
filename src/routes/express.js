@@ -15,7 +15,7 @@ function getCORSOrigin () {
 
     if (allowedOrigins) {
         return (origin, callback) => {
-            if(allowedOrigins.split(',').indexOf(origin) !== -1) {
+            if (allowedOrigins.split(',').indexOf(origin) !== -1) {
                 callback(null, true);
             } else {
                 callback(new Error('Not allowed by CORS'));
