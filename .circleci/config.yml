@@ -89,7 +89,7 @@ jobs:
           name: Publish to NPM
           command: |
             sed  -i '/version/s/[^.]*$/'"0-dev${CIRCLE_BUILD_NUM}\",/" package.json
-            npm publish=        
+            npm publish        
 
   deploy:
     <<: *defaults
