@@ -39,6 +39,7 @@ function createExpress() {
 
     if (corsOrigin !== null) {
         corsOptions.origin = corsOrigin;
+        corsOptions.credentials = true;
     }
 
     const app = express();
