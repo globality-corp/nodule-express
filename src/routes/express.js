@@ -12,7 +12,7 @@ function getCORSOrigin () {
     if (reflectOrigin) {
         return true;
     }
-
+    
     if (allowedOrigins) {
         return (origin, callback) => {
             if (allowedOrigins.split(',').indexOf(origin) !== -1) {
