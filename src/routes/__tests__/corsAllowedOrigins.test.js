@@ -23,7 +23,7 @@ describe.only('API: CORS configuration', () => {
         expect(res1.statusCode).toEqual(200);
         expect(res1.body.test).toEqual(true);
         expect(res1.header['access-control-allow-origin']).toEqual('https://foo.com');
-        expect(res1.header['access-control-allow-credentials']).toEqual("true");
+        expect(res1.header['access-control-allow-credentials']).toEqual('true');
 
         const res2 = await request(express)
             .get('/api/test')
@@ -32,7 +32,7 @@ describe.only('API: CORS configuration', () => {
         expect(res2.statusCode).toEqual(200);
         expect(res2.body.test).toEqual(true);
         expect(res2.header['access-control-allow-origin']).toEqual('https://bar.com');
-        expect(res2.header['access-control-allow-credentials']).toEqual("true");
+        expect(res2.header['access-control-allow-credentials']).toEqual('true');
 
         const res3 = await request(express)
             .get('/api/test')

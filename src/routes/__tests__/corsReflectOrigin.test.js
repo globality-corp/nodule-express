@@ -24,7 +24,7 @@ describe.only('API: CORS configuration', () => {
         expect(res.body.test).toEqual(true);
         expect(res.body.test).toEqual(true);
         expect(res.header['access-control-allow-origin']).toEqual('http://foobar.com');
-        expect(res.header['access-control-allow-credentials']).toEqual("true");
+        expect(res.header['access-control-allow-credentials']).toEqual('true');
     });
 
 });
