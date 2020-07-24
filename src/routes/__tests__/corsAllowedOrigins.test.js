@@ -2,7 +2,7 @@ import { getContainer, Nodule } from '@globality/nodule-config';
 import 'index';
 import request from 'supertest';
 
-describe.only('API: CORS configuration', () => {
+describe('API: CORS configuration', () => {
 
     it('will handle allowed origins configuration', async () => {
         await Nodule.testing().fromObject({
