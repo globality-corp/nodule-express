@@ -12,6 +12,7 @@ By importing `nodule-express`, the following bindings are made available.
 ### Middleware
 
  -  `middleware.basicAuth` injects a basic auth middleware
+ -  `middleware.errorHandler` injects a middleware to show unhandled errors in JSON format. This middleware should be use at the end of the middleware's chain inside the express app.
 
 ### Routes
 
@@ -25,6 +26,7 @@ By importing `nodule-express`, the following bindings are made available.
 * `lint`: Runs airbnb flavored eslint
 * `build`: Runs tests and transpiles ES6 -> ES5
 * `test`: Runs tests
+* `test:watch`: Runs tests watching files changes
 
 ## Errors
 
