@@ -1,6 +1,6 @@
 {
     "name": "@globality/nodule-express",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Node Express Conventions",
     "main": "lib/",
     "repository": "git@github.com:globality-corp/nodule-express",
@@ -11,6 +11,7 @@
         "build": "babel src --out-dir lib --ignore '**/__tests__/*,**/__mocks__/*'",
         "lint": "eslint src --cache",
         "test": "jest",
+        "test:watch": "jest --watch",
         "verify": "yarn lint && yarn test",
         "preyalc": "yarn clean && yarn build"
     },
