@@ -18,3 +18,4 @@ export {
 } from './logging';
 
 export { default as safely } from './decorators';
+export { except } from './utils';
