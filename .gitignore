@@ -65,3 +65,4 @@ lib
 yalc.lock
 
 .DS_Store
+.idea
