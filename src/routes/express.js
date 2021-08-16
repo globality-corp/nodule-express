@@ -5,8 +5,9 @@ import requestId from 'connect-requestid';
 
 import { bind, getContainer, setDefaults } from '@globality/nodule-config';
 
-function getCORSOrigin () {
-    const { config } = getContainer();
+import except from '../utils/except';
+
+function getCORSOrigin (config) {
     const { reflectOrigin, allowedOrigins } = config.cors;
 
     if (reflectOrigin) {
@@ -29,14 +30,18 @@ function getCORSOrigin () {
 setDefaults('cors', {
     allowedOrigins: '',
     reflectOrigin: false,
+    excludedPaths: null,
 });
 
 function createExpress() {
+    const { config } = getContainer();
+
     const corsOptions = {
         credentials: true,
         maxAge: 86400,
     };
-    const corsOrigin = getCORSOrigin();
+
+    const corsOrigin = getCORSOrigin(config);
 
     if (corsOrigin !== null) {
         corsOptions.origin = corsOrigin;
@@ -44,7 +49,7 @@ function createExpress() {
     }
 
     const app = express();
-    app.use(cors(corsOptions));
+    app.use(except(config.cors.excludedPaths || null, cors(corsOptions)));
     app.use(helmet());
     app.use(requestId);
 
