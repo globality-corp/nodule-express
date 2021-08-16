@@ -7,7 +7,7 @@ describe('API: CORS configuration', () => {
         clearBinding('config');
     });
 
-    it('will handle reflect origin configuration', async () => {
+    it('will add "access-control-expose-headers" in the response headers', async () => {
         await Nodule.testing().fromObject({
             cors: {
                 reflectOrigin: true,
