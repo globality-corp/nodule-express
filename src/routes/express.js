@@ -45,6 +45,7 @@ function createExpress() {
 
     if (corsOrigin !== null) {
         corsOptions.origin = corsOrigin;
+        corsOptions.exposedHeaders = ['X-Request-Id'];
     }
 
     const app = express();
