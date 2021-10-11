@@ -5,10 +5,11 @@ export const DEFAULT_ERROR_MESSAGE = 'Something went wrong';
 // eslint-disable-next-line no-unused-vars
 export default function errorHandler(err, req, res, next) {
     const { logger } = getContainer();
-    const environment = getConfig('logger.loggly.environment');
-    const displayErrorDetails = !['prod', 'demo'].includes(environment);
+    const hideErrorDetails = getConfig('logger.hideErrorDetails');
 
-    if (process.env.NODE_ENV !== 'test') {
+    const displayErrorDetails = !hideErrorDetails;
+
+    if (!displayErrorDetails) {
         logger.warning(req, err.message, {
             error: err,
         });
