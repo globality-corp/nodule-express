@@ -9,7 +9,7 @@ export default function errorHandler(err, req, res, next) {
 
     const displayErrorDetails = !hideErrorDetails;
 
-    if (!displayErrorDetails) {
+    if (process.env.NODE_ENV !== 'test') {
         logger.warning(req, err.message, {
             error: err,
         });
