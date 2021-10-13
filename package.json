@@ -29,7 +29,7 @@
     },
     "peerDependencies": {
         "@globality/nodule-config": ">= 2.13.2 < 3",
-        "@globality/nodule-logging": ">= 1.5.2 < 2",
+        "@globality/nodule-logging": ">= 1.5.4 < 2",
         "@globality/nodule-openapi": ">= 0.17.2 < 1"
     },
     "devDependencies": {
