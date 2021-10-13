@@ -7,7 +7,7 @@ describe('API: CORS configuration', () => {
         clearBinding('config');
     });
 
-    it('will handle reflect origin configuration', async () => {
+    it('will add "access-control-expose-headers" in the response headers', async () => {
         await Nodule.testing().fromObject({
             cors: {
                 reflectOrigin: true,
@@ -25,8 +25,6 @@ describe('API: CORS configuration', () => {
 
         expect(res.statusCode).toEqual(200);
         expect(res.body.test).toEqual(true);
-        expect(res.header['access-control-allow-origin']).toEqual('http://foobar.com');
-        expect(res.header['access-control-allow-credentials']).toEqual('true');
+        expect(res.header['access-control-expose-headers']).toEqual('X-Request-Id');
     });
-
 });

@@ -1,8 +1,11 @@
-import { getContainer, Nodule } from '@globality/nodule-config';
+import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
 import 'index';
 import request from 'supertest';
 
 describe('API: CORS configuration', () => {
+    beforeEach(() => {
+        clearBinding('config');
+    });
 
     it('will handle allowed origins configuration', async () => {
         await Nodule.testing().fromObject({
