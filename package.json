@@ -1,6 +1,6 @@
 {
     "name": "@globality/nodule-express",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "description": "Node Express Conventions",
     "main": "lib/",
     "repository": "git@github.com:globality-corp/nodule-express",
