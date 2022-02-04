@@ -25,6 +25,6 @@ describe('API: CORS configuration', () => {
 
         expect(res.statusCode).toEqual(200);
         expect(res.body.test).toEqual(true);
-        expect(res.header['access-control-expose-headers']).toEqual('X-Request-Id');
+        expect(res.header['access-control-expose-headers']).toEqual('X-Request-Id,X-Response-Time');
     });
 });
