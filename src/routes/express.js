@@ -7,7 +7,7 @@ import { bind, getContainer, setDefaults } from '@globality/nodule-config';
 
 import except from '../utils/except';
 
-function getCORSOrigin (config) {
+export function getCORSOrigin(config) {
     const { reflectOrigin, allowedOrigins } = config.cors;
 
     if (reflectOrigin) {
@@ -33,7 +33,7 @@ setDefaults('cors', {
     excludedPaths: null,
 });
 
-function createExpress() {
+export function createExpress() {
     const { config } = getContainer();
 
     const corsOptions = {

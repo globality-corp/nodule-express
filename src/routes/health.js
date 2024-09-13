@@ -3,7 +3,7 @@ import { OK } from 'http-status-codes';
 import { getContainer, bind } from '@globality/nodule-config';
 
 
-export default function health(req, res) {
+export default function health(_req, res) {
     const { config, metadata } = getContainer();
 
     const result = {
