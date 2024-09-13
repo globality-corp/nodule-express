@@ -13,6 +13,7 @@
         "build:types": "tsc",
         "lint": "eslint src --cache",
         "test": "jest",
+        "typecheck": "tsc --noEmit",
         "test:watch": "jest --watch",
         "verify": "yarn lint && yarn test",
         "preyalc": "yarn clean && yarn build"
