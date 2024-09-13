@@ -3,7 +3,7 @@ import { getConfig, getContainer, bind } from '@globality/nodule-config';
 export const DEFAULT_ERROR_MESSAGE = 'Something went wrong';
 
 // eslint-disable-next-line no-unused-vars
-export default function errorHandler(err, req, res, next) {
+export default function errorHandler(err, req, res, _next) {
     const { logger } = getContainer();
     const hideErrorDetails = getConfig('logger.hideErrorDetails');
 

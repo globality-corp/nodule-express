@@ -6,7 +6,7 @@ export default function safely(func) {
     return async (req, res, next) => {
         try {
             return await func(req, res, next);
-        } catch (error) {
+        } catch (/** @type {any} */ error) {
             // NB: handle StatusError
             if (error.code) {
                 const { logger } = getContainer();

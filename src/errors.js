@@ -14,6 +14,7 @@ import {
 export class APIError extends Error {
     constructor(message, code) {
         super(message);
+        // @ts-ignore
         Error.captureStackTrace(this, this.constructor);
 
         this.code = code;

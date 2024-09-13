@@ -17,7 +17,7 @@ export function getElapsedTime(req) {
     return (diff[0] * 1e3) + (diff[1] * 1e-6);
 }
 
-export function buildRequestLogs(req, serviceName, operationName, request) {
+export function buildRequestLogs(_req, serviceName, operationName, request) {
     const { config } = getContainer();
     const { data, params } = request;
     const args = assign({}, params, data);
