@@ -1,8 +1,10 @@
 /* Client request logger.
  */
-import { assign, get } from 'lodash';
+import lodash from 'lodash';
 import { extractLoggingProperties } from '@globality/nodule-logging';
 import { getContainer } from '@globality/nodule-config';
+
+const { assign, get } = lodash;
 
 export function calculateExecuteTime(executeStartTime) {
     const executeTime = process.hrtime(executeStartTime);
