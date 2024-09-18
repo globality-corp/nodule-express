@@ -6,6 +6,7 @@
     "repository": "git@github.com:globality-corp/nodule-express",
     "author": "Globality Engineering",
     "license": "MIT",
+    "type": "module",
     "files": [
         "lib/"
     ],
