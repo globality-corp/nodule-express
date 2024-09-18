@@ -1,6 +1,6 @@
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
-import 'index';
 import request from 'supertest';
+import '../../index.js';
 
 describe('API: CORS configuration', () => {
     beforeEach(() => {
@@ -15,7 +15,7 @@ describe('API: CORS configuration', () => {
         }).load();
 
         const { express } = getContainer('routes');
-        express.get('/api/test', (req, res) => {
+        express.get('/api/test', (_req, res) => {
             res.json({ test: true }).end();
         });
 
