@@ -1,7 +1,6 @@
-// @ts-check
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
-import '../../index.js';
 import request from 'supertest';
+import '../../index.js';
 
 
 describe('Basic API', () => {

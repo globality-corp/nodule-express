@@ -1,6 +1,6 @@
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
-import '../../index.js';
 import request from 'supertest';
+import '../../index.js';
 
 describe('API: CORS configuration', () => {
     beforeEach(() => {
