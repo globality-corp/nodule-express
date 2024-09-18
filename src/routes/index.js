@@ -1,5 +1,5 @@
-import './config';
-import './express';
-import './health';
-import './notFound';
-import './unauthorized';
+import './config.js';
+import './express.js';
+import './health.js';
+import './notFound.js';
+import './unauthorized.js';

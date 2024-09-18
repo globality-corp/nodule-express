@@ -1,5 +1,5 @@
-import './routes';
-import './middleware';
+import './routes/index.js';
+import './middleware/index.js';
 
 export {
     BadRequest,

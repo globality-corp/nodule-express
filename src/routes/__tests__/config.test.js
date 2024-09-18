@@ -1,5 +1,5 @@
 import { clearBinding, getContainer, loadFromObject, Nodule } from '@globality/nodule-config';
-import 'index';
+import '../../index.js';
 import request from 'supertest';
 
 

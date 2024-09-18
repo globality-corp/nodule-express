@@ -1,5 +1,5 @@
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
-import 'index';
+import '../../index.js';
 import request from 'supertest';
 import { DEFAULT_ERROR_MESSAGE } from '../error-handler/index.js';
 
