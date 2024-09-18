@@ -12,8 +12,7 @@
     ],
     "scripts": {
         "clean": "rm -rf ./lib",
-        "build": "babel src --out-dir lib --ignore '**/__tests__/*,**/__mocks__/*' && yarn build:types",
-        "build:types": "tsc",
+        "build": "tsc",
         "lint": "eslint src --cache",
         "test": "jest",
         "typecheck": "tsc --noEmit",
