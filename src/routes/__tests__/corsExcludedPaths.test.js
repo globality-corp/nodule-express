@@ -16,11 +16,11 @@ describe('API: CORS configuration', () => {
         }).load();
 
         const { express } = getContainer('routes');
-        express.get('/api/test', (req, res) => {
+        express.get('/api/test', (_req, res) => {
             res.json({ value: 'test' }).end();
         });
 
-        express.get('/api/health', (req, res) => {
+        express.get('/api/health', (_req, res) => {
             res.json({ value: 'health' }).end();
         });
 

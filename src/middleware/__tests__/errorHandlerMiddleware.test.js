@@ -1,7 +1,7 @@
 import { clearBinding, getContainer, Nodule } from '@globality/nodule-config';
 import 'index';
 import request from 'supertest';
-import { DEFAULT_ERROR_MESSAGE } from '../error-handler';
+import { DEFAULT_ERROR_MESSAGE } from '../error-handler/index.js';
 
 const ERROR_ENDPOINT = '/api/error';
 const ERROR_MESSAGE = 'Sample error';
@@ -18,7 +18,7 @@ const runTestApplication = async (environment, hideErrorDetails = true) => {
     const { express } = getContainer('routes');
     const { errorHandler } = getContainer('middleware');
 
-    express.get(ERROR_ENDPOINT, (req, res, next) => {
+    express.get(ERROR_ENDPOINT, (_req, _res, next) => {
         next(new Error(ERROR_MESSAGE));
     });
     express.use(errorHandler);
@@ -42,7 +42,7 @@ describe('Error handler middleware', () => {
         const { express } = getContainer('routes');
         const { errorHandler } = getContainer('middleware');
 
-        express.get(ERROR_ENDPOINT, (req, res, next) => {
+        express.get(ERROR_ENDPOINT, (_req, _res, next) => {
             next(new Error(ERROR_MESSAGE));
         });
         express.use(errorHandler);

@@ -5,7 +5,7 @@ import requestId from 'connect-requestid';
 
 import { bind, getContainer, setDefaults } from '@globality/nodule-config';
 
-import except from '../utils/except';
+import except from '../utils/except.js';
 
 export function getCORSOrigin(config) {
     const { reflectOrigin, allowedOrigins } = config.cors;

@@ -15,7 +15,7 @@ describe('API: CORS configuration', () => {
         }).load();
 
         const { express } = getContainer('routes');
-        express.get('/api/test', (req, res) => {
+        express.get('/api/test', (_req, res) => {
             res.json({ test: true }).end();
         });
 
